@@ -41,7 +41,10 @@ Seu desafio é criar o backend para um sistema de gerenciamento de uma bibliotec
 
 # Techs
 
-* Tecnologia que preferir :)
+* NodeJS
+* Express
+* Mongoose
+* MongoDB
 
 # Como começar
 
