@@ -18,30 +18,11 @@ function verifyIfBookExists(req, res, next) {
 }
 
 booksRoutes.get('/', (req, res) => {
-  return res.status(200).json(books)
+ // Done
 })
 
 booksRoutes.post('/', (req, res) => {
-  const { title, publisher, cover, authors } = req.body
-
-  const bookAlreadyExists = books.some((book) => book.title === title)
-
-  if(bookAlreadyExists) {
-    return res.status(400).json({ error: "Book already exists!" })
-  }
-
-  const newBook = {
-    id: v4(),
-    title,
-    publisher,
-    cover,
-    authors,
-    created_at: new Date()
-  }
-
-  books.push(newBook)
-
-  return res.status(201).json(newBook)
+  // Done
 })
 
 booksRoutes.put('/:id', verifyIfBookExists, (req, res) => {
@@ -54,7 +35,6 @@ booksRoutes.put('/:id', verifyIfBookExists, (req, res) => {
   book.publisher = publisher
   book.cover = cover
   book.authors = authors
-  book.updated_at = new Date()
 
   return res.status(200).json(book)
 })
